@@ -1,0 +1,27 @@
+{
+    "versionLabel": "1.0.0",
+    "uuid": "8b0f6b03-e591-4ddf-8ead-04110ef89747",
+    "appKeys": {
+        "dummy": 0
+    },
+    "longName": "Speak-Ni-Wo-Ta Daily Words",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "Daily Words",
+    "companyName": "Speak-Ni-Wo-Ta Inc.",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": [
+            {
+                "menuIcon": true,
+                "type": "png",
+                "name": "IMAGE_MENU_ICON",
+                "file": "images/MENU_ICON.png"
+            }
+        ]
+    }
+}
