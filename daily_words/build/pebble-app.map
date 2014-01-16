@@ -593,7 +593,7 @@ LOAD /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm
  .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.8.o
                 0x0000000000000000                __pbl_app_info
 
-.text           0x0000000000000084      0x4bc
+.text           0x0000000000000084      0x580
  *(.text)
  .text          0x0000000000000084       0x14 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
  *(.text.*)
@@ -604,162 +604,164 @@ LOAD /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm
  .text.window_unload
                 0x000000000000009c       0x10 src/daily_words.c.8.o
  .text.scroll_size_make
-                0x00000000000000ac       0x80 src/daily_words.c.8.o
+                0x00000000000000ac       0xa4 src/daily_words.c.8.o
  .text.window_load
-                0x000000000000012c      0x178 src/daily_words.c.8.o
+                0x0000000000000150      0x1f0 src/daily_words.c.8.o
  .text.in_received_handler
-                0x00000000000002a4       0x40 src/daily_words.c.8.o
+                0x0000000000000340       0x58 src/daily_words.c.8.o
  .text.click_config_providers
-                0x00000000000002e4       0x10 src/daily_words.c.8.o
+                0x0000000000000398       0x10 src/daily_words.c.8.o
  .text.select_click_handler
-                0x00000000000002f4       0x38 src/daily_words.c.8.o
+                0x00000000000003a8       0x48 src/daily_words.c.8.o
  .text.startup.main
-                0x000000000000032c       0x58 src/daily_words.c.8.o
-                0x000000000000032c                main
+                0x00000000000003f0       0x58 src/daily_words.c.8.o
+                0x00000000000003f0                main
  .text.app_event_loop
-                0x0000000000000384        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000384                app_event_loop
+                0x0000000000000448        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000448                app_event_loop
  .text.app_message_open
-                0x0000000000000390        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000390                app_message_open
+                0x0000000000000454        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000454                app_message_open
  .text.dict_find
-                0x000000000000039c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x000000000000039c                dict_find
+                0x0000000000000460        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000460                dict_find
  .text.fonts_get_system_font
-                0x00000000000003a8        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003a8                fonts_get_system_font
+                0x000000000000046c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x000000000000046c                fonts_get_system_font
  .text.layer_add_child
-                0x00000000000003b4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003b4                layer_add_child
+                0x0000000000000478        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000478                layer_add_child
  .text.layer_get_bounds
-                0x00000000000003c0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003c0                layer_get_bounds
- .text.memset   0x00000000000003cc        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003cc                memset
+                0x0000000000000484        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000484                layer_get_bounds
+ .text.memset   0x0000000000000490        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000490                memset
  .text.scroll_layer_add_child
-                0x00000000000003d8        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003d8                scroll_layer_add_child
+                0x000000000000049c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x000000000000049c                scroll_layer_add_child
  .text.scroll_layer_create
-                0x00000000000003e4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003e4                scroll_layer_create
+                0x00000000000004a8        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004a8                scroll_layer_create
  .text.scroll_layer_get_layer
-                0x00000000000003f0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003f0                scroll_layer_get_layer
+                0x00000000000004b4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004b4                scroll_layer_get_layer
  .text.scroll_layer_set_callbacks
-                0x00000000000003fc        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000003fc                scroll_layer_set_callbacks
+                0x00000000000004c0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004c0                scroll_layer_set_callbacks
  .text.scroll_layer_set_click_config_onto_window
-                0x0000000000000408        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000408                scroll_layer_set_click_config_onto_window
+                0x00000000000004cc        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004cc                scroll_layer_set_click_config_onto_window
  .text.scroll_layer_set_content_size
-                0x0000000000000414        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000414                scroll_layer_set_content_size
+                0x00000000000004d8        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004d8                scroll_layer_set_content_size
  .text.text_layer_create
-                0x0000000000000420        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000420                text_layer_create
+                0x00000000000004e4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004e4                text_layer_create
  .text.text_layer_destroy
-                0x000000000000042c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x000000000000042c                text_layer_destroy
+                0x00000000000004f0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004f0                text_layer_destroy
  .text.text_layer_get_content_size
-                0x0000000000000438        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000438                text_layer_get_content_size
+                0x00000000000004fc        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000004fc                text_layer_get_content_size
  .text.text_layer_get_layer
-                0x0000000000000444        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000444                text_layer_get_layer
+                0x0000000000000508        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000508                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x0000000000000450        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000450                text_layer_set_background_color
+                0x0000000000000514        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000514                text_layer_set_background_color
  .text.text_layer_set_font
-                0x000000000000045c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x000000000000045c                text_layer_set_font
+                0x0000000000000520        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000520                text_layer_set_font
  .text.text_layer_set_text
-                0x0000000000000468        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000468                text_layer_set_text
+                0x000000000000052c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x000000000000052c                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x0000000000000474        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000474                text_layer_set_text_alignment
+                0x0000000000000538        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000538                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x0000000000000480        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000480                text_layer_set_text_color
+                0x0000000000000544        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000544                text_layer_set_text_color
  .text.window_create
-                0x000000000000048c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x000000000000048c                window_create
+                0x0000000000000550        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000550                window_create
  .text.window_destroy
-                0x0000000000000498        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x0000000000000498                window_destroy
+                0x000000000000055c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x000000000000055c                window_destroy
  .text.window_get_root_layer
-                0x00000000000004a4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004a4                window_get_root_layer
+                0x0000000000000568        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000568                window_get_root_layer
  .text.window_set_window_handlers
-                0x00000000000004b0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004b0                window_set_window_handlers
+                0x0000000000000574        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000574                window_set_window_handlers
  .text.window_stack_push
-                0x00000000000004bc        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004bc                window_stack_push
+                0x0000000000000580        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000580                window_stack_push
  .text.app_message_outbox_send
-                0x00000000000004c8        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004c8                app_message_outbox_send
+                0x000000000000058c        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x000000000000058c                app_message_outbox_send
  .text.app_message_register_inbox_dropped
-                0x00000000000004d4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004d4                app_message_register_inbox_dropped
+                0x0000000000000598        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x0000000000000598                app_message_register_inbox_dropped
  .text.app_message_register_inbox_received
-                0x00000000000004e0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004e0                app_message_register_inbox_received
+                0x00000000000005a4        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000005a4                app_message_register_inbox_received
  .text.app_message_register_outbox_failed
-                0x00000000000004ec        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004ec                app_message_register_outbox_failed
+                0x00000000000005b0        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000005b0                app_message_register_outbox_failed
  .text.window_single_click_subscribe
-                0x00000000000004f8        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
-                0x00000000000004f8                window_single_click_subscribe
+                0x00000000000005bc        0xc /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+                0x00000000000005bc                window_single_click_subscribe
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000000504       0x3c src/daily_words.c.8.o
+                0x00000000000005c8       0x3c src/daily_words.c.8.o
                                          0x3d (size before relaxing)
 
-.glue_7         0x0000000000000540        0x0
+.glue_7         0x0000000000000604        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000540        0x0
+.glue_7t        0x0000000000000604        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000540        0x0
+.vfp11_veneer   0x0000000000000604        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000540        0x0
+.v4_bx          0x0000000000000604        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000540        0x0
+.iplt           0x0000000000000604        0x0
  .iplt          0x0000000000000000        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x0000000000000540        0x0
+.rel.dyn        0x0000000000000604        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x0000000000000540        0x4
+.data           0x0000000000000604        0x4
  *(.data)
- .data          0x0000000000000540        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x0000000000000540        0x4 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000000540                __dso_handle
- .data          0x0000000000000544        0x0 src/daily_words.c.8.o
- .data          0x0000000000000544        0x0 appinfo.auto.c.8.o
- .data          0x0000000000000544        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
- .data          0x0000000000000544        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x0000000000000544        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x0000000000000604        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x0000000000000604        0x4 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x0000000000000604                __dso_handle
+ .data          0x0000000000000608        0x0 src/daily_words.c.8.o
+ .data          0x0000000000000608        0x0 appinfo.auto.c.8.o
+ .data          0x0000000000000608        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/Pebble/lib/libpebble.a(tmpwpRC2ipebble.o)
+ .data          0x0000000000000608        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x0000000000000608        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
 
-.igot.plt       0x0000000000000544        0x0
+.igot.plt       0x0000000000000608        0x0
  .igot.plt      0x0000000000000000        0x0 /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.bss            0x0000000000000544       0x10
+.bss            0x0000000000000608       0x14
  *(.bss)
  *(.bss.*)
  .bss.text_layer
-                0x0000000000000544        0x4 src/daily_words.c.8.o
+                0x0000000000000608        0x4 src/daily_words.c.8.o
  .bss.text_layer2
-                0x0000000000000548        0x4 src/daily_words.c.8.o
+                0x000000000000060c        0x4 src/daily_words.c.8.o
+ .bss.text_layer3
+                0x0000000000000610        0x4 src/daily_words.c.8.o
  .bss.scroll_layer
-                0x000000000000054c        0x4 src/daily_words.c.8.o
- .bss.window    0x0000000000000550        0x4 src/daily_words.c.8.o
+                0x0000000000000614        0x4 src/daily_words.c.8.o
+ .bss.window    0x0000000000000618        0x4 src/daily_words.c.8.o
 
 DISCARD
  libc.a(*)
@@ -792,16 +794,16 @@ OUTPUT(/Users/rijad/WebServer/GitRepositories/pebble/daily_words/build/pebble-ap
  .comment       0x0000000000000000       0x4f appinfo.auto.c.8.o
  .comment       0x0000000000000000       0x4f /Users/rijad/pebble-dev/PebbleSDK-2.0-BETA5/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000     0x127d
- .debug_info    0x0000000000000000      0xf55 src/daily_words.c.8.o
- .debug_info    0x0000000000000f55      0x328 appinfo.auto.c.8.o
+.debug_info     0x0000000000000000     0x13c8
+ .debug_info    0x0000000000000000     0x10a0 src/daily_words.c.8.o
+ .debug_info    0x00000000000010a0      0x328 appinfo.auto.c.8.o
 
 .debug_abbrev   0x0000000000000000      0x3b7
  .debug_abbrev  0x0000000000000000      0x30c src/daily_words.c.8.o
  .debug_abbrev  0x000000000000030c       0xab appinfo.auto.c.8.o
 
-.debug_loc      0x0000000000000000      0x244
- .debug_loc     0x0000000000000000      0x244 src/daily_words.c.8.o
+.debug_loc      0x0000000000000000      0x263
+ .debug_loc     0x0000000000000000      0x263 src/daily_words.c.8.o
 
 .debug_aranges  0x0000000000000000       0x78
  .debug_aranges
@@ -812,15 +814,15 @@ OUTPUT(/Users/rijad/WebServer/GitRepositories/pebble/daily_words/build/pebble-ap
 .debug_ranges   0x0000000000000000       0x68
  .debug_ranges  0x0000000000000000       0x68 src/daily_words.c.8.o
 
-.debug_line     0x0000000000000000      0x36d
- .debug_line    0x0000000000000000      0x249 src/daily_words.c.8.o
- .debug_line    0x0000000000000249      0x124 appinfo.auto.c.8.o
+.debug_line     0x0000000000000000      0x38b
+ .debug_line    0x0000000000000000      0x267 src/daily_words.c.8.o
+ .debug_line    0x0000000000000267      0x124 appinfo.auto.c.8.o
 
-.debug_str      0x0000000000000000      0xaad
- .debug_str     0x0000000000000000      0x912 src/daily_words.c.8.o
-                                        0x9c0 (size before relaxing)
- .debug_str     0x0000000000000912      0x19b appinfo.auto.c.8.o
+.debug_str      0x0000000000000000      0xae0
+ .debug_str     0x0000000000000000      0x945 src/daily_words.c.8.o
+                                        0x9f3 (size before relaxing)
+ .debug_str     0x0000000000000945      0x19b appinfo.auto.c.8.o
                                         0x2ac (size before relaxing)
 
-.debug_frame    0x0000000000000000       0xe0
- .debug_frame   0x0000000000000000       0xe0 src/daily_words.c.8.o
+.debug_frame    0x0000000000000000       0xe4
+ .debug_frame   0x0000000000000000       0xe4 src/daily_words.c.8.o

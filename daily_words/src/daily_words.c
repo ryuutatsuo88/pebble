@@ -3,18 +3,21 @@
 static Window *window;
 static TextLayer *text_layer;
 static TextLayer *text_layer2;
+static TextLayer *text_layer3;
 static ScrollLayer *scroll_layer;
 
-static const int vert_scroll_text_padding = 20;
+static const int vert_scroll_text_padding = 40;
 
 enum {
   PINYIN = 0,
-  EN = 1
+  EN = 1,
+  TONED = 2
 };
 
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
   text_layer_set_text(text_layer, "Loading...");
+  text_layer_set_text(text_layer3, "");
   text_layer_set_text(text_layer2, "");
   app_message_outbox_send();
 }
@@ -34,14 +37,17 @@ static void scroll_size_make() {
   GRect bounds = layer_get_bounds(window_layer);	
   // Trim text layer and scroll content to fit text box
   GSize max_size_1 = text_layer_get_content_size(text_layer);
+  GSize max_size_3 = text_layer_get_content_size(text_layer3);
   GSize max_size_2 = text_layer_get_content_size(text_layer2);
-  scroll_layer_set_content_size(scroll_layer, GSize(bounds.size.w, max_size_1.h + max_size_2.h + vert_scroll_text_padding));
+  scroll_layer_set_content_size(scroll_layer, GSize(bounds.size.w, max_size_1.h + max_size_2.h + max_size_3.h + vert_scroll_text_padding));
 }
 
 static void in_received_handler(DictionaryIterator *iter, void *context) {
      Tuple *pinyin = dict_find(iter, PINYIN);
+     Tuple *tone = dict_find(iter, TONED);
 	 Tuple *en = dict_find(iter, EN);
      text_layer_set_text(text_layer, pinyin->value->cstring);
+     text_layer_set_text(text_layer3, tone->value->cstring);
 	 text_layer_set_text(text_layer2, en->value->cstring);
 	 scroll_size_make();
 }
@@ -61,7 +67,8 @@ static void window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
   GRect max_text_bounds = GRect(0, 0, bounds.size.w, 40);
-  GRect max_text_bounds2 = GRect(0, 40, bounds.size.w, 2000);
+  GRect max_text_bounds3 = GRect(0, 40, bounds.size.w, 40);
+  GRect max_text_bounds2 = GRect(0, 80, bounds.size.w, 2000);
 
   // Initialize the scroll layer
   scroll_layer = scroll_layer_create(bounds);	
@@ -80,7 +87,14 @@ static void window_load(Window *window) {
   text_layer_set_font(text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   text_layer_set_text(text_layer, "Loading...");
   text_layer_set_text_alignment(text_layer, GTextAlignmentCenter);
-	
+   
+  text_layer3 = text_layer_create(max_text_bounds3);
+  text_layer_set_background_color(text_layer3, GColorBlack);
+  text_layer_set_text_color(text_layer3, GColorWhite);
+  text_layer_set_font(text_layer3, fonts_get_system_font(FONT_KEY_GOTHIC_28));
+  text_layer_set_text(text_layer3, "");
+  text_layer_set_text_alignment(text_layer3, GTextAlignmentCenter);
+   
   text_layer2 = text_layer_create(max_text_bounds2);
   text_layer_set_background_color(text_layer2, GColorBlack);
   text_layer_set_text_color(text_layer2, GColorWhite);
@@ -92,6 +106,7 @@ static void window_load(Window *window) {
 	
   // Add the layers for display
   scroll_layer_add_child(scroll_layer, text_layer_get_layer(text_layer));
+  scroll_layer_add_child(scroll_layer, text_layer_get_layer(text_layer3));
   scroll_layer_add_child(scroll_layer, text_layer_get_layer(text_layer2));
   
   layer_add_child(window_layer, scroll_layer_get_layer(scroll_layer));	
