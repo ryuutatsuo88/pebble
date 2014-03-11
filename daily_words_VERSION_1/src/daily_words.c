@@ -115,6 +115,8 @@ static void window_load(Window *window) {
 
 static void window_unload(Window *window) {
   text_layer_destroy(text_layer);
+  text_layer_destroy(text_layer2);
+  text_layer_destroy(text_layer3);
 }
 
 static void init(void) {

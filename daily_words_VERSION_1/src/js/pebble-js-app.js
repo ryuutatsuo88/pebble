@@ -128,31 +128,17 @@ s = s.replace(/ker4an2/g, "ke4ran2");
 return s;
 }	
 
-var transferInProgress = false;
-
-Pebble.addEventListener("ready", function(e) {});
-
-Pebble.addEventListener("appmessage", function(e) {
-  console.log("Got message: " + JSON.stringify(e));
-
-    if (transferInProgress == false) {
-        transferInProgress = true;
-        var r;
+function getDailyTerm() {
+		var r;
   		var req = new XMLHttpRequest();
   		req.open('POST', "http://speakniwota.com/dailyword", true);
-  		req.onload = function(ee) {
+  		req.onload = function(e) {
     		if (req.readyState == 4) {
       			if(req.status == 200) {
         			r = JSON.parse(req.responseText);
         			
         			if (r) {
-						downloadBinaryResource("http://speakniwota.com/characters/pbi/" + r.ids + "_" + tonefy(r.pinyin) + ".pbi", function(bytes) {
-								transferImageBytes({"0": r.enpin, "1": r.en, "2": tonefy(r.pinyin)}, 
-													bytes, e.payload['NETIMAGE_CHUNK_SIZE'],
-									function() { console.log("Done!"); transferInProgress = false; },
-									function(e) { console.log("Failed! " + e); transferInProgress = false; }
-								);
-					  });
+						Pebble.sendAppMessage({"0": r.enpin, "1": r.en, "2": tonefy(r.pinyin)});
         			}
       			} else {
        				console.log("Error");
@@ -160,87 +146,17 @@ Pebble.addEventListener("appmessage", function(e) {
    			 }
   		}
   		req.send("application=speakniwota&pebble=pebble");
-    }
-    else {
-      console.log("Ignoring request to download  because another download is in progress.");
-    }
-});
+};
 
-function downloadBinaryResource(imageURL, callback, errorCallback) {
-		var req = new XMLHttpRequest();
-		req.open("GET", imageURL,true);
-		req.responseType = "arraybuffer";
-		req.onload = function(e) {
-			console.log("loaded");
-			var buf = req.response;
-			if(req.status == 200 && buf) {
-				var byteArray = new Uint8Array(buf);
-				var arr = [];
-				for(var i=0; i<byteArray.byteLength; i++) {
-					arr.push(byteArray[i]);
-				}
-	
-				console.log("Received image with " + byteArray.length + " bytes.");
-				callback(arr);
-			}
-			else {
-			  errorCallback("Request status is " + req.status);
-			}
-		}
-		req.onerror = function(e) {
-		  errorCallback(e);
-		}
-		req.send(null);
-}
+Pebble.addEventListener("ready",
+    function(e) {
+		getDailyTerm();
+    }
+);
 
-function transferImageBytes(json, bytes, chunkSize, successCb, failureCb) {
-		  var retries = 0;
-		
-		  success = function() {
-			console.log("Success cb=" + successCb);
-			if (successCb != undefined) {
-			  successCb();
-			}
-		  };
-		  failure = function(e) {
-			console.log("Failure cb=" + failureCb);
-			if (failureCb != undefined) {
-			  failureCb(e);
-			}
-		  };
-		
-		  // This function sends chunks of data.
-		  sendChunk = function(start) {
-			var txbuf = bytes.slice(start, start + chunkSize);
-			console.log("Sending " + txbuf.length + " bytes - starting at offset " + start);
-			Pebble.sendAppMessage({ "NETIMAGE_DATA": txbuf },
-			  function(e) {
-				// If there is more data to send - send it.
-				if (bytes.length > start + chunkSize) {
-				  sendChunk(start + chunkSize);
-				}
-				// Otherwise we are done sending. Send closing message.
-				else {
-				  Pebble.sendAppMessage({"0": "done", "1": json["0"], "2": json["1"], "3": json["2"] }, success, failure);
-				}
-			  },
-			  // Failed to send message - Retry a few times.
-			  function (e) {
-				if (retries++ < 3) {
-				  console.log("Got a nack for chunk #" + start + " - Retry...");
-				  sendChunk(start);
-				}
-				else {
-				  failure(e);
-				}
-			  }
-			);
-		  };
-		
-		  // Let the pebble app know how much data we want to send.
-		  Pebble.sendAppMessage({"NETIMAGE_BEGIN": bytes.length },
-			function (e) {
-			  // success - start sending
-			  sendChunk(0);
-			}, failure);
-}
+Pebble.addEventListener("appmessage",
+  function(e) {
+  		getDailyTerm();
+  }
+);
+
