@@ -139,14 +139,14 @@ Pebble.addEventListener("appmessage", function(e) {
         transferInProgress = true;
         var r;
   		var req = new XMLHttpRequest();
-  		req.open('POST', "http://speakniwota.com/dailyword", true);
+  		req.open('POST', "https://speakniwota.com/dailyword", true);
   		req.onload = function(ee) {
     		if (req.readyState == 4) {
       			if(req.status == 200) {
         			r = JSON.parse(req.responseText);
         			
         			if (r) {
-						downloadBinaryResource("http://speakniwota.com/characters/pbi/" + r.ids + "_" + tonefy(r.pinyin) + ".pbi", function(bytes) {
+						downloadBinaryResource("https://speakniwota.com/characters/pbi/" + r.ids + "_" + tonefy(r.pinyin) + ".pbi", function(bytes) {
 								transferImageBytes({"0": r.enpin, "1": r.en, "2": tonefy(r.pinyin)}, 
 													bytes, e.payload['NETIMAGE_CHUNK_SIZE'],
 									function() { console.log("Done!"); transferInProgress = false; },
